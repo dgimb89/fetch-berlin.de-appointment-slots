@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  fetch:
+    image: curlimages/curl:latest
+    volumes:
+     - "./:/home/curl_user"
+    restart: always
+    entrypoint: /bin/sh
+    command: /home/curl_user/run-requests.sh
