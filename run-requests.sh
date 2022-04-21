@@ -8,6 +8,9 @@ do
     echo $(date +"%T")
 
     curl -sS -k 'https://otv.verwalt-berlin.de/api/remote2/TerminBuchen/25b7675b-1a49-477b-94ec-f194b535ea72/proceed?dswid=7147&suppressRenderOnChange=true' \
+    --connect-timeout 30 \
+    --retry-delay 30 \
+    --retry 5 \
     -X 'POST' \
     -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryF9iTfcAyKWzW1hC5' \
     -H 'Pragma: no-cache' \
