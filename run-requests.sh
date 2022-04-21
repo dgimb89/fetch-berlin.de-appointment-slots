@@ -20,7 +20,7 @@ do
     -H 'Origin: https://otv.verwalt-berlin.de' \
     -H 'Content-Length: 11102' \
     -H 'X-Requested-With: XMLHttpRequest' \
-    --data-binary "@/home/curl_user/request-data" | grep '"Für die gewählte Dienstleistung sind aktuell keine Termine frei!'
+    --data-binary "@/home/curl_user/request-data" | grep 'Für die gewählte Dienstleistung sind aktuell keine Termine frei!'
 
     result=$?
 done
